@@ -5,32 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SMTD"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800">
+        Title="Simsiz tarmoqlarda aloqa qamrovi hududini hisoblash dasturi" Height="600" Width="800" Icon="./src/logo.jpg">
+    <Window.Background>
+        <ImageBrush TileMode="None" ImageSource="./src/background50.jpg" />
+    </Window.Background>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
-        <Label Content="Pn" HorizontalAlignment="Left" Margin="77,50,0,202.8" Width="60"/>
+        <Label Content="Nominal quvvat&#xD;&#xA;(Pn, Vt)" HorizontalAlignment="Left" Margin="10,41,0,198.8" Width="124" FontWeight="Bold"/>
         <TextBox Name="nominal_quvvat" HorizontalAlignment="Left" Height="23" Margin="153,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
-        <Label Content="f" HorizontalAlignment="Left" Margin="79,98,0,155.8" Width="60"/>
-        <TextBox Name="urtacha_ishchi_chastota" HorizontalAlignment="Left" Height="23" Margin="153,98,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Label Content="h2" HorizontalAlignment="Left" Margin="77,145,0,105.8" Width="60" RenderTransformOrigin="0.463,-1.994"/>
-        <TextBox Name="Qabullash_antenasi_balandligi" HorizontalAlignment="Left" Height="23" Margin="153,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Es" HorizontalAlignment="Left" Margin="295,50,0,202.8" Width="60"/>
-        <TextBox Name="AS_talab_kuchlanganlik" HorizontalAlignment="Left" Height="23" Margin="372,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="dh" HorizontalAlignment="Left" Margin="295,98,0,155.8" Width="60"/>
-        <TextBox Name="xizmat_relefi" HorizontalAlignment="Left" Height="23" Margin="372,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Vf" HorizontalAlignment="Left" Margin="295,145,0,105.8" Width="60"/>
-        <TextBox Name="ajratkich_sunish" HorizontalAlignment="Left" Height="23" Margin="372,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="alfa" HorizontalAlignment="Left" Margin="539,50,0,202.8" Width="60"/>
-        <TextBox Name="fider_sunish" HorizontalAlignment="Left" Height="23" Margin="599,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="dh1" HorizontalAlignment="Left" Margin="539,98,0,150.8" Width="60"/>
-        <TextBox Name="xizmat_relefi_1" HorizontalAlignment="Left" Height="23" Margin="599,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="dh2" HorizontalAlignment="Left" Margin="539,145,0,107.8" Width="60"/>
-        <TextBox Name="xizmat_relefi_2" HorizontalAlignment="Left" Height="23" Margin="599,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="353,0.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="95" Click="Button_Click" Height="25" RenderTransformOrigin="0.217,1.136"/>
-        <ComboBox Margin="77,199,520.6,60.8" Name="Comb" IsEditable="True" IsReadOnly="True" Text="Yarim to'lqinli vibrator">
+        <Label Content="O'ratcha ishchi&#xD;&#xA;chastota&#xA;(f, MHz)" HorizontalAlignment="Left" Margin="10,91,0,133.8" Width="133" FontWeight="Bold"/>
+        <TextBox Name="urtacha_ishchi_chastota" HorizontalAlignment="Left" Height="23" Margin="153,109,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Qabul qiluvchi&#xA;antennaning&#xA;balandligi (h2, m)" HorizontalAlignment="Left" Margin="10,151,0,71.8" Width="124" RenderTransformOrigin="0.463,-1.994" FontWeight="Bold"/>
+        <TextBox Name="Qabullash_antenasi_balandligi" HorizontalAlignment="Left" Height="23" Margin="153,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.637,0.443"/>
+        <Label Content="AS qabullash&#xA;punktidagi &#xA;signal maydonining&#xA;(Es, dB)" HorizontalAlignment="Left" Margin="295,32,0,163.8" Width="114" FontWeight="Bold"/>
+        <TextBox Name="AS_talab_kuchlanganlik" HorizontalAlignment="Left" Height="23" Margin="414,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.57,0.443"/>
+        <Label Content="Filtrlar va &#xD;&#xA;antenna &#xD;&#xA;ajratkichlaridagi&#xD;&#xA;so'nish&#xA;(Vf, dB)" HorizontalAlignment="Left" Margin="295,122,0,71.8" Width="114" FontWeight="Bold"/>
+        <TextBox Name="ajratkich_sunish" HorizontalAlignment="Left" Height="23" Margin="414,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Fider so'nishi &#xA;(alfa, dB/m)" HorizontalAlignment="Left" Margin="553,50,0,186.8" Width="106" FontWeight="Bold"/>
+        <TextBox Name="fider_sunish" HorizontalAlignment="Left" Height="23" Margin="655,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Joyning relefi&#xA; (dh1, m)" HorizontalAlignment="Left" Margin="555,98,0,139.8" Width="95" FontWeight="Bold"/>
+        <TextBox Name="xizmat_relefi_1" HorizontalAlignment="Left" Height="23" Margin="655,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Joyning relefi &#xA;(dh2, m)" HorizontalAlignment="Left" Margin="553,154,0,84.8" Width="99" FontWeight="Bold"/>
+        <TextBox Name="xizmat_relefi_2" HorizontalAlignment="Left" Height="23" Margin="655,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Natija" HorizontalAlignment="Left" Margin="356,14.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="95" Click="Button_Click" Height="25" RenderTransformOrigin="0.217,1.136"/>
+        <ComboBox Margin="77,258,520.6,1.8" Name="Comb">
 
 
             <TextBlock >Yarim to‘lqinli vibrator</TextBlock>
@@ -44,5 +45,14 @@
 
         </ComboBox>
         <Polyline Margin="55,40.2,42.6,95.4" Height="150" Grid.Row="1" Stroke="Black" StrokeThickness="2" Points=""/>
+        <Label Content="" x:Name="h30" HorizontalAlignment="Left" Margin="129,91.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="192" Height="30" FontWeight="Bold"/>
+        <Label Content="" x:Name="h50" HorizontalAlignment="Left" Margin="129,119.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="192" Height="30" FontWeight="Bold"/>
+        <Label Content="" x:Name="h70" HorizontalAlignment="Left" Margin="129,147.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="192" Height="30" FontWeight="Bold"/>
+        <Label Content="" x:Name="h100" HorizontalAlignment="Left" Margin="326,91.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="192" Height="30" FontWeight="Bold"/>
+        <Label Content="" x:Name="h150" HorizontalAlignment="Left" Margin="326,119.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="192" Height="30" FontWeight="Bold"/>
+        <Label Content="" x:Name="h200" HorizontalAlignment="Left" Margin="539,91.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="192" Height="30" FontWeight="Bold"/>
+        <Label Content="" x:Name="h300" HorizontalAlignment="Left" Margin="539,119.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="192" Height="30" FontWeight="Bold"/>
+        <Label Content="Antenat turini tanlang" HorizontalAlignment="Left" Margin="77,213,0,0" VerticalAlignment="Top" Width="196" Height="38" FontWeight="Bold"/>
+        <Label Content="Aloqa qamrovi radiusining machta balandligidan bog'liqligi: " HorizontalAlignment="Left" Margin="129,54.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="602" FontWeight="Bold"/>
     </Grid>
 </Window>

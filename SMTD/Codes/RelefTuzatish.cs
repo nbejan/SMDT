@@ -24,13 +24,13 @@ namespace SMTD
 
         public double getVrelGood()
         {
-            MessageBox.Show(Relef_tezatish_qishloq_good(h1).ToString());
+            //MessageBox.Show(Relef_tezatish_qishloq_good(h1).ToString());
             return (Relef_tezatish_qishloq_good(h1) + Relef_tezatish_shahar_good(h1))/2;
         }
 
         public double getVrelBad()
         {
-            MessageBox.Show(Relef_tezatish_qishloq_bad(h2).ToString());
+            //MessageBox.Show(Relef_tezatish_qishloq_bad(h2).ToString());
             return (Relef_tezatish_qishloq_bad(h2) + Relef_tezatish_shahar_bad(h2)) / 2;
         }
 
